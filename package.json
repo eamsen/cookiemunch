@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "bundle": "bundle",
+    "rules": "./node_modules/@cliqz/autoconsent/rules"
+  },
   "scripts": {
     "bundle": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-rules": "npm explore @cliqz/autoconsent -- npm run build-rules"
   },
   "repository": {
     "type": "git",

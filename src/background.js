@@ -38,7 +38,7 @@ async function munchIt(url, sender) {
         await tab.doOptOut();
       }
     } catch (e) {
-      console.error(e);
+      console.error("Cookiemunch error=" + e);
       result.reconsentFailure = e.toString();
     }
   }
@@ -59,7 +59,7 @@ browser.webNavigation.onDOMContentLoaded.addListener(
 browser.runtime.onMessage.addListener((message, sender) => {
   if (message.type === "frame") {
     munchIt(message.url, sender).then(result => {
-      console.log("autoconsent background test result " + JSON.stringify(result));
+      console.log("Cookiemunch[b] result=" + JSON.stringify(result));
     });
   }
 });

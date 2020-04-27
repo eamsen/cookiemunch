@@ -2,8 +2,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
 import json from "@rollup/plugin-json";
 import copy from "rollup-plugin-copy";
-
-// import pkg from './package.json';
+import pkg from './package.json';
 
 export default [{
   input: "./src/background.js",
@@ -17,7 +16,10 @@ export default [{
     json(),
     copy({
       targets: [
-        { src: "./src/manifest.json", dest: "./bundle" },
+        { src: [
+          "./src/manifest.json",
+          pkg.directories.rules,
+        ], dest: "./bundle" },
       ],
     }),
   ],
