@@ -19,7 +19,7 @@ export default [{
         { src: [
           "./src/manifest.json",
           pkg.directories.rules,
-        ], dest: "./bundle" },
+        ], dest: pkg.directories.bundle },
       ],
     }),
   ],
