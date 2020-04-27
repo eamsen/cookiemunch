@@ -15,7 +15,7 @@ Find the rules in `node_modules/@cliqz/autoconsent/rules/`.
     
     $ npm run bundle
 
-Find the minimized extension files in `bundle/`.
+Find the bundled extension files in `bundle/`.
 
 ## License
 Mozilla Public License 2.0
